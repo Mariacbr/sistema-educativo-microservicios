@@ -4,9 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.mycompany.app</groupId>
-        <artifactId>SpringMicroservicios</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/> <!-- busca en repositorio central -->
     </parent>
 
     <groupId>com.microservicio.eureka</groupId>

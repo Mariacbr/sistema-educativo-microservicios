@@ -8,8 +8,9 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.5</version>
-        <relativePath/>
+        <relativePath/> <!-- Muy importante este slash vacío -->
     </parent>
+    
 
     <groupId>com.microservicio.usuario</groupId>
     <artifactId>usuario-servicio</artifactId>

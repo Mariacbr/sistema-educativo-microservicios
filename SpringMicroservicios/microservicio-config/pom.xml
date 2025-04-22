@@ -3,12 +3,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mycompany.app</groupId>
-        <artifactId>SpringMicroservicios</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
     <groupId>com.microservicio.config</groupId>
     <artifactId>microservicio-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -19,48 +13,62 @@
         <spring-cloud.version>2023.0.1</spring-cloud.version>
     </properties>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/>
+    </parent>
+
     <dependencies>
         <!-- Spring Cloud Config Server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
+            
         </dependency>
 
         <!-- Git support for Config Server -->
         <dependency>
             <groupId>org.eclipse.jgit</groupId>
             <artifactId>org.eclipse.jgit</artifactId>
+            <version>6.5.0.202303070854-r</version>
         </dependency>
 
-        <!-- Eureka Client (opcional si vas a registrar este servicio en Eureka) -->
+        <!-- Eureka Client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.1.1</version> <!-- Especifica la versión -->
         </dependency>
 
-        <!-- Web para exponer el Config Server -->
+        <!-- Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.2.4</version> <!-- Especifica la versión -->
         </dependency>
 
-        <!-- Actuator para monitoreo -->
+        <!-- Actuator -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>3.2.4</version> <!-- Especifica la versión -->
         </dependency>
 
-        <!-- Lombok para evitar código repetitivo -->
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
             <scope>provided</scope>
         </dependency>
 
-        <!-- (Opcional) Dependencia para pruebas -->
+        <!-- Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.2.4</version> <!-- Especifica la versión -->
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -82,8 +90,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.4</version> <!-- Especifica la versión -->
             </plugin>
         </plugins>
     </build>
-
 </project>

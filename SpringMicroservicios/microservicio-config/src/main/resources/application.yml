@@ -2,18 +2,19 @@ server:
   port: 8888
 
 spring:
-  profiles:
-    active: native
-
   application:
-    name: config-server
+    name: config-server  # Aquí solo una vez
+  profiles:
+    active: native  # Perfil activo es 'native'
+
   cloud:
     config:
       server:
         native:
-          search-locations: classpath:/configuracion
+          search-locations: 
+            - classpath:/configuracion  # Directorio de configuración
+
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
- 
